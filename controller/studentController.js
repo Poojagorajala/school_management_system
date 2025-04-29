@@ -1,6 +1,6 @@
 const { getPool } = require('../db');
 
-// --- MODEL FUNCTIONS ---
+// --- MODEL FUNCTIONS -----------------
 const insertStudent = async (name, age, email, fatherName, contactNumber, address) => {
     const pool = getPool();
     try {
