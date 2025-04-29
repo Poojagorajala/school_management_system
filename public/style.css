@@ -1,0 +1,116 @@
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header, h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for main content */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Student list items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: #007BFF;
+}
+
+form button {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #c0392b;
+}
+
+/* Add button */
+.button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+/* Form styles */
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button[type="submit"] {
+    background-color: #007BFF;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Back link */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

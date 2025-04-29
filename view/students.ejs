@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Students</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>Student List</header>
+    <div class="container">
+        <a href="/students/add" class="button">➕ Add New Student</a>
+        <ul>
+            <% students.forEach(student => { %>
+                <li>
+                    <div>
+                        <a href="/students/<%= student.id %>">
+                            <strong><%= student.name %></strong>
+                        </a>
+                        <!-- <p>Father's Name: <%= student.father_name %></p>
+                        <p>Contact Number: <%= student.contact_number %></p>
+                        <p>Address: <%= student.address %></p> -->
+                    </div>
+                    <form action="/students/<%= student.id %>/delete" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>All Students</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>Student List</header>
+    <div class="container">
+        <a href="/students/add" class="button">➕ Add New Student</a>
+        <ul>
+            <% students.forEach(student => { %>
+                <li>
+                    <div>
+                        <a href="/students/<%= student.id %>">
+                            <strong><%= student.name %></strong>
+                        </a>
+                        <p>Father's Name: <%= student.father_name %></p>
+                        <p>Contact Number: <%= student.contact_number %></p>
+                        <p>Address: <%= student.address %></p>
+                    </div>
+                    <form action="/students/<%= student.id %>/delete" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>All Students</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>Student List</header>
+    <div class="container">
+        <a href="/students/add" class="button">➕ Add New Student</a>
+
+        <ul>
+            <% students.forEach(student => { %>
+                <li style="margin-top: 10px;">
+                    <a href="/students/<%= student.id %>">
+                        <strong><%= student.name %></strong> (Age: <%= student.age %>)
+                    </a>
+                    <form action="/students/<%= student.id %>/delete" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html> -->
+
