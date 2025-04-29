@@ -20,7 +20,7 @@ const insertStudent = async (name, age, email, fatherName, contactNumber, addres
 const getAllStudents = async () => {
     const pool = getPool();
     try {
-        console.log('Attempting to fetch students...'); // Added logging
+        // console.log('Attempting to fetch students...'); // Added logging
         const query = `SELECT id, name, age, email FROM students`; // Select only basic info for the list
         // console.log('Executing query:', query); // Added logging
         const result = await pool.query(query);
