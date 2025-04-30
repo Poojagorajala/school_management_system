@@ -1,6 +1,6 @@
 const { getPool } = require('../db');
 
-// --- MODEL FUNCTIONS -----------------
+// ---- MODEL FUNCTIONS 
 const insertStudent = async (name, age, email, fatherName, contactNumber, address) => {
     const pool = getPool();
     try {
@@ -54,14 +54,16 @@ const getStudentById = async (id) => {
 const deleteStudentById = async (id) => {
     const pool = getPool();
     try {
-        await pool.query('DELETE FROM students WHERE id = $1', [id]);
+        const query=`DELETE FROM students WHERE id = $1`;
+         const result=await pool.query(query, [id]);
+         return result.rows[0];
     } catch (error) {
         console.error('Error deleting student:', error.message);
         throw error;
     }
 };
 
-// --- CONTROLLER FUNCTIONS ---
+// ---- CONTROLLER FUNCTIONS ---
 
 // Show all students (GET /students)
 exports.getAllStudentsPage = async (req, res) => {
